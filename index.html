@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <title>Kiosko</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>Ubicaciones de la ciudad.</h1>
+            <p>Agrega ubicaciones de la ciudad.</p>
+
+            <form action="#">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" placeholder="Ingresa el nombre">
+                    <button class="method-button" id="agregarBtn" type="button">Agregar</button>
+                </div>
+
+                <div class="form-group">
+                    <label for="ubicacion1">Ubicación 1</label>
+                    <input type="text" id="ubicacion1" placeholder="Ingresa la ubicación 1 (el id)">
+                </div>
+
+                <div class="form-group">
+                    <label for="ubicacion2">Ubicación 2</label>
+                    <input type="text" id="ubicacion2" placeholder="Ingresa la ubicación 2 (el id)">
+                </div>
+
+                <div class="form-group">
+                    <label for="extra-info">Distancia entre esos puntos</label>
+                    <input type="text" id="distancia" placeholder="Ingresa la distancia en KM">
+                </div>
+
+                <button type="button" class="method-button" id="edgeBtn">Agregar conexión</button>
+
+                <div class="form-group">
+                    <input type="text" id="dfsText" placeholder="Acá se mostrará el recorrido en profundidad">
+                </div>
+
+                <button type="button" class="method-button" id="dfsBtn">Recorrido en profundidad</button>
+
+                <div class="form-group">
+                    <input type="text" id="inicio" placeholder="Ciudad actual">
+                    <input type="text" id="destino" placeholder="Ciudad destino">
+                </div>
+                <button type="button" class="method-button" id="distanciaCorta">Ver ruta más corta</button>
+                <input type="text" id="dijTxt" placeholder="Acá se mostrará la distancia entre ciudades">
+            </form>
+        </div>
+        <div class="right-section">
+            <h2>Ubicaciones Agregadas</h2>
+            <div id="ubicaciones"></div>
+        </div>
+    </div>
+    <script type="module" src="./src/controllers/script.mjs"></script>
+</body>
+
+</html>
